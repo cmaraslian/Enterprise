@@ -6,30 +6,21 @@ using System.Threading.Tasks;
 
 namespace Fiap.HelloWord.UI.Model
 {
-    class Moto : Veiculo
+
+    class Balao : Veiculo, IVoador
     {
-        public bool Bau { get; set; }
-
-
-        public Moto(string placa) : base(placa)
+        public Balao(string placa) : base(placa)
         {
-
         }
 
         public override void Acelerar()
         {
-            Console.WriteLine("Moto acelerando");
+            Console.WriteLine("Acelerando...");
         }
 
-        public override void Frear()
+        public void Voar()
         {
-            Console.WriteLine("Moto parando");
-
+            Console.WriteLine("Voando...");
         }
-
     }
-
-
-    
-
 }

@@ -26,6 +26,27 @@ namespace Fiap.HelloWord.UI
 
             Console.WriteLine("Moto - Bau: " + moto.Bau);
             Console.ReadLine();
+
+            //Criar uma lista de balao
+            var lista = new List<Balao>();
+            lista.Add(new Balao("Magico"));
+            lista.Add(new Balao("Não magico Magico"));
+            lista.Add(new Balao("Medival"));
+
+            //Exibir os dados do balado da lista
+
+            foreach (var item in lista) {
+                Console.WriteLine(item.Placa);
+            }
+            Console.ReadLine();
+
+
+
+
+
+
+
+
         }
     }
 }
