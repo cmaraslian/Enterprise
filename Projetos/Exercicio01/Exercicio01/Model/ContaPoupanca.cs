@@ -11,13 +11,39 @@ namespace Fiap.Banco.Model
 
         Decimal taxa { get; set; }
 
-        private readonly string _rendimento;
-        
+        private readonly decimal _rendimento;
 
+        public ContaPoupanca(decimal rendimento)
+        {
+            _rendimento = rendimento;
+        }
+             
 
         public decimal CalculaRetornoInvestimento()
         {
-            throw new NotImplementedException();
+            return this.saldo * _rendimento;
+
         }
+
+
+        public override void Depositar(decimal valor)
+        {
+            this.saldo = this.saldo + valor;
+        }
+
+        public override void Retirar(decimal valor)
+        {
+            if (this.saldo - valor - this.taxa < 0)
+            {
+                throw new Exception("Saldo insuficiente");
+            }
+            else
+            {
+                this.saldo = this.saldo - valor - this.taxa;
+            }
+
+        }
+
+
     }
 }
