@@ -7,9 +7,9 @@
 
 <h2>@TempData["mensagem"]</h2>
 
-<h3>@Model.Nome  @Model.Salario @Model.Data</h3>
+<h3>@Model.Nome  @Model.Salario @Model.Data.ToString("dd/MM/yyyy")</h3>
 
 <h3>O nome do aluno é @ViewBag.nomeAluno</h3>
-<h3>Data @ViewBag.dataNascimento</h3>
+<h3>Data @ViewBag.dataNascimento.ToString("dd/MM/yyyy")</h3>
 <h3>Salário @ViewBag.salario</h3>
 
