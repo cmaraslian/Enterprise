@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fiap.Exemplo01.MVC", "Fiap.Exemplo01.MVC\Fiap.Exemplo01.MVC.csproj", "{D3098A96-705C-495B-994D-D32D614A6229}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fiap.HelloWorld.UI", "Fiap.HelloWorld.UI\Fiap.HelloWorld.UI.csproj", "{957453C6-184E-4404-AD81-FF940F9AC27B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D3098A96-705C-495B-994D-D32D614A6229}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D3098A96-705C-495B-994D-D32D614A6229}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D3098A96-705C-495B-994D-D32D614A6229}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D3098A96-705C-495B-994D-D32D614A6229}.Release|Any CPU.Build.0 = Release|Any CPU
+		{957453C6-184E-4404-AD81-FF940F9AC27B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{957453C6-184E-4404-AD81-FF940F9AC27B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{957453C6-184E-4404-AD81-FF940F9AC27B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{957453C6-184E-4404-AD81-FF940F9AC27B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
