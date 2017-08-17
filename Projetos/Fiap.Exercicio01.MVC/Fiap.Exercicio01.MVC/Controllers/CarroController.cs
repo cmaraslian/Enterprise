@@ -31,6 +31,15 @@ namespace Fiap.Exercicio01.MVC.Controllers
 
         public ActionResult Listar() //mvcaction4 atalho para criar rapido o metodo
         {
+
+            Carro carro = new Carro();
+            carro.Descricao = "dasdsa";
+            carro.ArCondicionado = true;
+            carro.Placa = "ZZZ";
+            carro.Valor = 31321;
+
+            _lista.Add(carro);
+            
             return View(_lista);
         }
 
