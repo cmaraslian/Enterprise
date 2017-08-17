@@ -1,0 +1,38 @@
+﻿
+@model Fiap.Exercicio01.MVC.Models.Carro
+
+
+@{
+    ViewBag.Title = "Cadastrar";
+}
+
+<h2>Cadastrar</h2>
+
+@using (Html.BeginForm()) {
+    <div class="form-group">
+        @Html.LabelFor(c => c.Placa)
+        @Html.TextBoxFor(c => c.Placa)
+    </div>
+    <div class="form-group">
+        @Html.CheckBoxFor(c => c.ArCondicionado)
+        @Html.LabelFor(c => c.ArCondicionado)
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(c => c.ArCondicionado)
+        @Html.TextBoxFor(c => c.ArCondicionado)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(c => c.Descricao)
+        @Html.TextAreaFor(c => c.Descricao)
+    </div>
+
+
+    <input type="submit" value="Cadastrar" class="btn btn-primary" />
+    
+
+}
+
+
+
+
