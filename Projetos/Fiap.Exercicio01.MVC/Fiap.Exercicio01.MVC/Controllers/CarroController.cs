@@ -11,7 +11,7 @@ namespace Fiap.Exercicio01.MVC.Controllers
     {
 
         //Simular o banco
-        private List<Carro> _lista = new List<Carro>();
+        private static List<Carro> _lista = new List<Carro>();
 
 
       
