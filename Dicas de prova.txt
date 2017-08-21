@@ -1,0 +1,6 @@
+O que é Razor? (Pergunta de prova) - É um framework / view engine ,
+para construção de paginas dinamicas.
+
+O que é Helper? Gera os codigos HTML
+
+
