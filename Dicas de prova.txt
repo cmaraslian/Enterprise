@@ -3,4 +3,5 @@ para construção de paginas dinamicas.
 
 O que é Helper? Gera os codigos HTML
 
+Problemas comuns na prova:
 
