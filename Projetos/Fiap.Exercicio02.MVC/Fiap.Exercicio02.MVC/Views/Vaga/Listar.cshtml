@@ -1,4 +1,4 @@
-﻿@model List <Fiap.Exercicio02.MVC.Models.Vaga>
+﻿@model List<Fiap.Exercicio02.MVC.Models.Vaga>
 
 
 @{
@@ -8,34 +8,18 @@
 <h2>Listar</h2>
 
 <table class="table">
-    <tr>
-        Cargo
-    </tr>
-    <tr>
-        Descrição
-    </tr>
-    <tr>
-        Salário
-    </tr>
-    <tr>
-        Vale Refeição
-    </tr>
-    <tr>
-        Nível
-    </tr>
 
+    <tr>
+        <th>Cargo</th>
+        <th>Descrição</th>
+        <th>Salário</th>
+        <th>Vale Refeição</th>
+        <th>Nível</th>
+    </tr>
     @foreach (var item in Model)
     {
-        <tr>
-            <td>@item.Cargo</td>
-            <td>@item.Descricao</td>
-            <td>@item.Salario</td>
-            <td>@item.ValeRefeicao</td>
-            <td>@item.Nivel</td>
-        </tr>
+        @Html.Partial("_minhaTabela", item)
     }
-
-
 
 </table>
 

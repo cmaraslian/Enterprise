@@ -6,11 +6,8 @@
 
 
 
-@if (TempData["msg"] != null ){
-    <h2>@TempData["msg"]</h2>
-}else{
-    <h2>cadastro</h2>
-}
+
+@Helper.Message(TempData["msg"])
 
 
 
@@ -37,10 +34,16 @@
         @Html.DropDownListFor( c => c.Nivel, ViewBag.opcoes as SelectList,
             new { @class = "form-control"})
     </div>
-    <input type="submit" value="cadastrar" class="btn btn-primary" />
-
-
+<!--    <input type="submit" value="cadastrar" class="btn btn-primary" /> -->
+   @Helper.Submit("Cadastrar");
 }
+
+@section Scripts{
+    
+    <script></script>
+    <p>O java script vai aqui...</p>
+
+    }
 
 
 
