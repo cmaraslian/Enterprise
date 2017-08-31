@@ -8,34 +8,33 @@ using System.Web.Mvc;
 
 namespace Fiap.Exemplo03.MVC.Controllers
 {
-    public class FrutaController : Controller
+    public class ProdutorController : Controller
     {
-        private SacolaoContext _context = new SacolaoContext();
 
+        private SacolaoContext _context = new SacolaoContext();
+        
+        // GET: Produtor
         [HttpGet]
         public ActionResult Cadastrar()
-        {  
+        {   
             return View();
         }
 
         [HttpPost]
-        public ActionResult Cadastrar(Fruta fruta)
+        public ActionResult Cadastrar(Produtor produtor)
         {
-            fruta.DataCadastro = DateTime.Now;
-            _context.Frutas.Add(fruta);
-
+            produtor.DataCadastro = DateTime.Now;
+            _context.Produtores.Add(produtor);
             _context.SaveChanges();
-            TempData["msg"] = "Cadastrado!";
-            //Para nao cadastrar novamente no F5
+            TempData["msg"] = "Cadastrado";
             return RedirectToAction("Cadastrar");
         }
 
         public ActionResult Listar()
-        {   
-            return View(_context.Frutas.ToList());
+        {
+            
+            return View(_context.Produtores.ToList());
         }
-
-
 
     }
 }

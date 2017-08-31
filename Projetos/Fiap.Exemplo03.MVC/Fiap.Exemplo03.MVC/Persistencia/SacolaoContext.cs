@@ -10,5 +10,6 @@ namespace Fiap.Exemplo03.MVC.Persistencia
     public class SacolaoContext : DbContext
     {
         public DbSet<Fruta> Frutas { get; set; }
+        public DbSet <Produtor> Produtores { get; set; }
     }
 }
