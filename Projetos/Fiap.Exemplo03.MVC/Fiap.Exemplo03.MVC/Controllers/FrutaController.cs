@@ -2,6 +2,7 @@
 using Fiap.Exemplo03.MVC.Persistencia;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -35,7 +36,29 @@ namespace Fiap.Exemplo03.MVC.Controllers
             return View(_context.Frutas.ToList());
         }
 
+        [HttpGet]
+        public ActionResult Alterar(int id)
+        {
+            return View(_context.Frutas.Find(id));
+        }
 
+        [HttpPost]
+        public ActionResult Alterar(Fruta fruta)
+        {
+            _context.Entry(fruta).State = EntityState.Modified;
+            _context.SaveChanges();
+            TempData["msg"] = "Atualizado!";
+            return RedirectToAction("Listar");
+        }
+
+        public ActionResult Excluir(int id)
+        {
+            _context.Frutas.Remove(_context.Frutas.Find(id));
+            _context.SaveChanges();
+            TempData["msg"] = "Excluido!";
+            return RedirectToAction("listar");
+            
+        }
 
     }
 }

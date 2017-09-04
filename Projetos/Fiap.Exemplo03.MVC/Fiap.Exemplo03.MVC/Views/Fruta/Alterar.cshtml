@@ -1,0 +1,40 @@
+﻿@model Fiap.Exemplo03.MVC.Models.Fruta
+
+
+@{
+    ViewBag.Title = "Alterar";
+}
+
+<h2>Atualização de Fruta</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(f => f.Id)
+    <div class="form-group">
+        @Html.LabelFor(f => f.Nome)
+        @Html.TextBoxFor(f => f.Nome, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(f => f.Calorias)
+        @Html.TextBoxFor(f => f.Calorias, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(f => f.Calorias)
+        @Html.TextBoxFor(f => f.Calorias, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group" >
+        @Html.LabelFor(f => f.DataCadastro)
+        @Html.TextBoxFor(f => f.DataCadastro, new { @class = "form-control", @readonly = "readonly" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(f => f.Semente)
+        @Html.CheckBoxFor(f => f.Semente)
+    </div>
+    <input type="submit" value="salvar" class="btn btn-primary" />
+    @Html.ActionLink("Cancelar","Listar","Fruta", new {@class = "btn btn-default"})
+}
+
+
