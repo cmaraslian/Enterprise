@@ -1,0 +1,29 @@
+﻿@model List<Fiap.Exemplo04.MVC.Models.Jogador>
+
+@{
+    ViewBag.Title = "Listar";
+}
+
+<h2>Listar</h2>
+
+<table class="table">
+
+    <tr>
+        <th>Nome</th>
+        <th>Data Nascimento</th>
+        <th>Time</th>
+    </tr>
+    @foreach (var item in Model)
+
+    {
+        <tr>
+            <td>@item.Nome</td>
+            <td>@item.DataNascimento.ToShortDateString()</td>
+            <td>@item.Time.Nome</td>
+        </tr>
+    }
+
+
+
+</table>
+

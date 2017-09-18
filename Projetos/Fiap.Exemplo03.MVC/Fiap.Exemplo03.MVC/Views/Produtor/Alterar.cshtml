@@ -1,0 +1,36 @@
+﻿@model Fiap.Exemplo03.MVC.Models.Produtor
+
+@{
+    ViewBag.Title = "Alterar";
+}
+
+<h2>Alterar</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(f => f.Id)
+    <div class="form-group">
+        @Html.LabelFor(f => f.Nome)
+        @Html.TextBoxFor(f => f.Nome, new { @class = "form-control" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(f => f.Certificado)
+        @Html.CheckBoxFor(f => f.Certificado)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(f => f.DataCadastro)
+        @Html.TextBoxFor(f => f.DataCadastro, new { @class = "form-control", @readonly = "readonly" })
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(f => f.Limite)
+        @Html.TextBoxFor(f => f.Limite)
+    </div>
+    <input type="submit" value="salvar" class="btn btn-primary" />
+    @Html.ActionLink("Cancelar", "Listar", "Produtor", new { @class = "btn btn-default" })
+}
+
+
+
+

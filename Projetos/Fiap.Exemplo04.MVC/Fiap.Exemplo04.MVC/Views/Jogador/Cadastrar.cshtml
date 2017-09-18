@@ -1,0 +1,26 @@
+﻿@model Fiap.Exemplo04.MVC.Models.Jogador
+
+
+
+@{
+    ViewBag.Title = "Cadastrar";
+}
+
+<h2>Cadastrar</h2>
+
+@using (Html.BeginForm())
+{
+    <div class="form-group">
+        @Html.LabelFor( j => j.Nome)
+        @Html.TextBoxFor(j => j.Nome ,new {@class = "form-control"})
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(j => j.DataNascimento)
+        @Html.TextBoxFor(j => j.DataNascimento, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(j => j.Time)
+        @Html.DropDownListFor(j => j.TimeId,ViewBag.Times as SelectList,"Selecione", new { @class = "form-control" })
+    </div>
+    <input type="submit" value="Salvar" class="btn btn-primary" />
+}
