@@ -11,7 +11,7 @@ namespace Fiap.Exemplo04.MVC.Controllers
 {
     public class TimeController : Controller
     {
-        private UnityOfWork _unit = new UnityOfWork();
+        private UnitOfWork _unit = new UnitOfWork();
 
         [HttpGet]
         public ActionResult Cadastrar()

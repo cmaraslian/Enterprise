@@ -155,7 +155,7 @@
     <Compile Include="Repositories\ITimeRepository.cs" />
     <Compile Include="Repositories\JogadorRepository.cs" />
     <Compile Include="Repositories\TimeRepository.cs" />
-    <Compile Include="Units\UnityOfWork.cs" />
+    <Compile Include="Units\UnitOfWork.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />

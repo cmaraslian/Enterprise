@@ -7,7 +7,7 @@ using System.Web;
 
 namespace Fiap.Exemplo04.MVC.Units
 {
-    public class UnityOfWork  : IDisposable
+    public class UnitOfWork  : IDisposable
     {
         private FutebolContext _context = new FutebolContext();
         private ITimeRepository _timeRepository;

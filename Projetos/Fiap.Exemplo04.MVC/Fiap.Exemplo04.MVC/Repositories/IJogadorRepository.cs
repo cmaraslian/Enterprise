@@ -21,6 +21,8 @@ namespace Fiap.Exemplo04.MVC.Repositories
                 
         List<Jogador> BuscarPor(Expression<Func<Jogador, bool>> filtro);
 
+        void Deletar(int id);
+
         
 
     }

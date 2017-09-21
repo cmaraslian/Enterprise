@@ -1,11 +1,14 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Web;
+
+
 using Fiap.Exemplo04.MVC.Models;
 using Fiap.Exemplo04.MVC.Persistencia;
 using System.Data.Entity;
-using System.Linq.Expressions;
 
 namespace Fiap.Exemplo04.MVC.Repositories
 {
@@ -14,9 +17,9 @@ namespace Fiap.Exemplo04.MVC.Repositories
         
         private FutebolContext _context;
 
-        public JogadorRepository(FutebolContext _context)
+        public JogadorRepository(FutebolContext context)
         {
-            this._context = _context;
+            _context = context;
         }
 
         public void Alterar(Jogador jogador)
@@ -28,22 +31,29 @@ namespace Fiap.Exemplo04.MVC.Repositories
         {
             return _context.Jogadores.Find(id);
         }
-
+               
         
-        public List<Jogador> BuscarPor(Expression<Func<Jogador, bool>> filtro)
+        public List<Jogador> BuscarPor(Expression<Func<Jogador, bool >> filtro)
         {
-            //return _context.Times.Include("Time").Where(filtro).ToList();
+            return _context.Jogadores.Include("Time").Where(filtro).ToList();
         }
 
+       
         public void Cadastrar(Jogador jogador)
         {
             _context.Jogadores.Add(jogador);
             _context.SaveChanges();
         }
 
+        public void Deletar(int id)
+        {
+            var jogador = _context.Jogadores.Find(id);
+            _context.Jogadores.Remove(jogador);
+        }
+
         public List<Jogador> Listar()
         {
-            throw new NotImplementedException();
+            return _context.Jogadores.Include("Time").ToList();
         }
     }
 }
