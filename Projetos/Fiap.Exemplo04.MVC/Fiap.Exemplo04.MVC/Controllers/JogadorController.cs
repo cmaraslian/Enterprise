@@ -35,10 +35,20 @@ namespace Fiap.Exemplo04.MVC.Controllers
         [HttpPost]
         public ActionResult Cadastrar(Jogador jogador)
         {
-            _unit.JogadorRepository.Cadastrar(jogador);
-            _unit.Save();
-            TempData["msg"] = "Jogador Cadastrado!";
-            return RedirectToAction("Cadastrar");
+
+            if (ModelState.IsValid)
+            {
+                _unit.JogadorRepository.Cadastrar(jogador);
+                _unit.Save();
+                TempData["msg"] = "Jogador Cadastrado!";
+                return RedirectToAction("Cadastrar");
+            }
+            else
+            {
+                var lista = _unit.TimeRepository.Listar();
+                ViewBag.times = new SelectList(lista, "TimeId", "Nome");
+                return View(jogador);
+            }
         }
 
         protected override void Dispose(bool disposing)

@@ -20,12 +20,19 @@ namespace Fiap.Exemplo04.MVC.Controllers
         }
         [HttpPost]
         public ActionResult Cadastrar(Time time)
-        {
-            _unit.TimeRepository.Cadastrar(time);
-            _unit.Save();
-            TempData["msg"] = "Cadastrado!";
-            return RedirectToAction("Cadastrar");
+            {
+            if (ModelState.IsValid)
+            {
+                _unit.TimeRepository.Cadastrar(time);
+                _unit.Save();
+                TempData["msg"] = "Cadastrado!";
+                return RedirectToAction("Cadastrar");
+            }
+            else {
+                return View(time);
+            }
         }
+
         [HttpGet]
         public ActionResult Listar()
         {

@@ -12,23 +12,30 @@
 
 @using (Html.BeginForm())
 {
+    @Html.ValidationSummary()
+    
     <div class="form-group">
         @Html.LabelFor(t => t.Nome)
         @Html.TextBoxFor(t => t.Nome, new { @class = "form-control"})
+        @Html.ValidationMessageFor(t => t.Nome)
     </div>
     <div class="form-group">
         @Html.LabelFor(t => t.DataFundacao)
         @Html.TextBoxFor(t => t.DataFundacao, new { @class = "form-control"})
+        @Html.ValidationMessageFor(t => t.DataFundacao)
+
     </div>
     <fieldset>
         <legend>Técnico</legend>
         <div class="form-group">
             @Html.LabelFor(t => t.Tecnico.Nome)
             @Html.TextBoxFor(t => t.Tecnico.Nome, new { @class = "form-control"})
+            @Html.ValidationMessageFor(t => t.Tecnico.Nome)
         </div>
         <div class="form-group">
             @Html.LabelFor(t => t.Tecnico.NumeroTitulos)
             @Html.TextBoxFor(t => t.Tecnico.NumeroTitulos, new { @class = "form-control"})
+            @Html.ValidationMessageFor(t => t.Tecnico.NumeroTitulos)
         </div>
     </fieldset>
     <input type="submit" value="Salvar" class="btn btn-primary" />

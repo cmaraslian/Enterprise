@@ -1,0 +1,19 @@
+-Criar projeto ASP.NET MVC e Entity Framework
+-CRUD
+   - Criar model (Com relacionamentos)
+   - Criar o DbContext
+   - Criar Unity of Work,Repositoty 	 
+   - Criar Controller
+   - Criar View (Com Validações, Bootstrap)
+   - Ajustar o Layout (Links, Menus)
+
+
+
+Funcionario			Empresa
+	- FuncionarioId		     -EmpresaId
+	- Nome			     -CNPJ
+	- Salario		     -Razao Social
+	- Data Admissao
+
+
+	
