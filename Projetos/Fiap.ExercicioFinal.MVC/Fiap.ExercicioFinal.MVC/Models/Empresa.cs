@@ -14,7 +14,7 @@ namespace Fiap.ExercicioFinal.MVC.Models
         [Required]
         public string RazaoSocial { get; set; }
 
-        public ICollection<Funcionario> funcionarios  { get; set; }
+        public List<Funcionario> funcionarios  { get; set; }
         
 
     }

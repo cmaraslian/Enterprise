@@ -12,16 +12,20 @@ namespace Fiap.ExercicioFinal.MVC.Models
         public int FuncionarioId { get; set; }
 
         [Required]
+        [StringLength(100,ErrorMessage ="Valor máximo de 100 caracteres")]
         public string Nome { get; set; }
 
         [Required]
+        [Display(Name ="Salário")]
         public double Salario { get; set; }
 
         [Required]
+        [Display(Name ="Data de admissão")]
         public DateTime DataAdmissao { get; set; }
-
-        [Required]
+               
         public Empresa empresa { get; set; }
+
+        public int EmpresaId { get; set; }
 
 
     }

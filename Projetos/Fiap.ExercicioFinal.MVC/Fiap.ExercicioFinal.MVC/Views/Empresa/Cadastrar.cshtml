@@ -1,0 +1,32 @@
+﻿@model Fiap.ExercicioFinal.MVC.Models.Empresa
+
+@{
+    ViewBag.Title = "Cadastrar";
+}
+
+<h2>Cadastro de Empresa</h2>
+
+@if (TempData["msg"] != null)
+{
+    <div class="alert alert-success">@TempData["msg"]</div>
+}
+
+@using (Html.BeginForm())
+{
+
+    <div class="form-group">
+        @Html.LabelFor(e => e.CNPJ)
+        @Html.TextBoxFor(e => e.CNPJ , new { @class = "form-control"})
+        @Html.ValidationMessageFor(e => e.CNPJ)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(e => e.RazaoSocial)
+        @Html.TextBoxFor(e => e.RazaoSocial, new { @class = "form-control" })
+        @Html.ValidationMessageFor(e => e.RazaoSocial)
+    </div>
+   <input type="submit" value="Salvar" class="btn btn-primary">
+}
+
+
+
+
