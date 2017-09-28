@@ -1,0 +1,30 @@
+﻿@model List<Fiap.ExercicioFinal.MVC.Models.Empresa>
+    
+
+@{
+    ViewBag.Title = "Listar";
+}
+
+<h2>Listar</h2>
+
+
+<table class="table">
+
+    <tr>
+        <th>CNPJ</th>
+        <th>Racao Social</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {<tr>
+        
+        
+            <td>@item.CNPJ</td>
+            <td>@item.RazaoSocial</td>
+          
+    </tr>
+    }
+</table>
+
+
+

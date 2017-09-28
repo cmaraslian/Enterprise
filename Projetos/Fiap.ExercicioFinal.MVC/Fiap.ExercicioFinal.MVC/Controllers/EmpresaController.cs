@@ -43,7 +43,7 @@ namespace Fiap.ExercicioFinal.MVC.Controllers
 
         public ActionResult Listar()
         {
-            return View();
+            return View(_unit.EmpresaRepository.Listar());
         }
 
     }
