@@ -23,7 +23,7 @@ namespace Fiap.ExercicioFinal.MVC.Models
         [Display(Name ="Data de admissão")]
         public DateTime DataAdmissao { get; set; }
                
-        public Empresa empresa { get; set; }
+        public Empresa Empresa { get; set; }
 
         public int EmpresaId { get; set; }
 
