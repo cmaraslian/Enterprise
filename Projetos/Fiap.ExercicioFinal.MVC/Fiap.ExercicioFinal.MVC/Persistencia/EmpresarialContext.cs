@@ -17,6 +17,10 @@ namespace Fiap.ExercicioFinal.MVC.Persistencia
 
         public DbSet<Empresa> Empresas { get; set; }
 
+        public DbSet<Fornecedor> Fornecedores { get; set; }
+
+
+
 
     }
 }
