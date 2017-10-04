@@ -15,13 +15,6 @@ namespace TreinoNAC.Models
         public DateTime DataCadastro { get; set; }
 
         public Departamento Departamento { get; set; }
-
-
-
-
-
-
-
-
+        
     }
 }

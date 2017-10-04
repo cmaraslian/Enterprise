@@ -1,0 +1,30 @@
+﻿@model List<TreinoNAC.Models.Funcionario>
+
+@{
+    ViewBag.Title = "Listar";
+}
+
+<h2>Listar</h2>
+
+
+<table class="table">
+
+    <tr>
+        <th>Nome</th>
+        <th>Data de Cadastro</th>
+        <th>Departamento</th>
+
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th>@item.Nome</th>
+            <th>@item.DataCadastro.ToShortDateString()</th>
+            <th>@item.Departamento.Nome</th>
+        </tr>
+
+    }
+
+
+</table>

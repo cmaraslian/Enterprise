@@ -1,0 +1,28 @@
+﻿@model TreinoNAC.Models.Departamento
+
+
+@{
+    ViewBag.Title = "Cadastrar";
+}
+
+<h2>Cadastro de Departamento</h2>
+
+
+@if(TempData["msg"] != null)
+{
+    <div class="alert alert-info">@TempData["msg"]</div>
+    
+}
+
+@using (Html.BeginForm())
+{
+
+    <div class="form-group">
+        @Html.LabelFor( d => d.Nome)
+        @Html.TextBoxFor(d => d.Nome, new {@class = "form control"})
+        @Html.ValidationMessageFor(d => d.Nome)
+    </div>
+    <input type="submit" value="Salvar" class="btn btn-primary" />
+    
+}
+

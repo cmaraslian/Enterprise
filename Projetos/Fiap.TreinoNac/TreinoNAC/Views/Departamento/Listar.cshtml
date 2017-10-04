@@ -1,0 +1,23 @@
+﻿@model List<TreinoNAC.Models.Departamento>
+
+@{
+    ViewBag.Title = "Lista de Departamentos";
+}
+
+<h2>Lista de departamentos</h2>
+
+<table class="table">
+
+    <tr>
+        <th>Nome</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Nome</td>
+        </tr>
+    }
+
+</table>
+
